@@ -1,4 +1,8 @@
-{
+{ 
+  "scripts": {
+    "start":"nodemon ./demo/server.js",
+    "watch":"node ./index.js"
+  },
   "dependencies": {
     "koa": "^2.5.0",
     "koa-router": "^7.4.0",

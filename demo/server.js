@@ -27,6 +27,11 @@ router.get("/b", (ctx, next) => {
   next();
 });
 
+router.get("/c", (ctx, next) => {
+  ctx.body = "/c";
+  next();
+});
+
 router.get("/abc", (ctx, next) => {
   ctx.body = "/abc";
   next();
@@ -74,6 +79,20 @@ router.get("/level/:level", (ctx, next) => {
   next();
 });
 
+router.get("/old", (ctx, next) => {
+  ctx.body = ctx.req.url;
+  next();
+});
+
+router.get("/new", (ctx, next) => {
+  ctx.body = ctx.req.url;
+  next();
+});
+
+router.get("/a/b/c/d", (ctx, next) => {
+  ctx.body = ctx.req.url;
+  next();
+});
 
 app.use(router.routes());
 
