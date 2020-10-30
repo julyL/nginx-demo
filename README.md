@@ -83,3 +83,10 @@ location ~ ^/page$ {
 [https://lufficc.com/blog/configure-nginx-as-a-web-server](https://lufficc.com/blog/configure-nginx-as-a-web-server)
 
 [https://www.rails365.net/articles/nginx-zhi-ji-ben-jie-shao-he-pei-zhi-wen-jian-yu-fa-yi](https://www.rails365.net/articles/nginx-zhi-ji-ben-jie-shao-he-pei-zhi-wen-jian-yu-fa-yi)
+
+
+生成https配置文件,需新建private目录 
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout private/cert.key -out private/cert.crt
+openssl dhparam -out private/cert.pem 2048
+```
